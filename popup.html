@@ -1,32 +1,42 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self';">
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Fixorium Wallet</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Fixorium Wallet</title>
+  <style>
+    body {
+      width: 400px;
+      height: 500px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: purple;
+      font-size: 20px;
+      margin: 0;
+    }
+  </style>
+  <script>
+    // Redirect to Fixorium wallet after 1.5 seconds
+    setTimeout(() => {
+      window.location.href = "https://wallet.fixorium.com.pk";
+    }, 1500);
+  </script>
 </head>
 <body>
-<div id="app">
-<h1>Fixorium Wallet (Dev)</h1>
-<div id="status"></div>
-
-
-<div id="locked">
-<input id="password" placeholder="password" type="password" />
-<button id="unlock">Unlock (dev)</button>
-</div>
-
-
-<div id="actions" style="display:none">
-<button id="create-mock">Create Mock Key</button>
-<button id="approve-connect">Approve Connect (if asked)</button>
-<button id="approve-sign">Approve Sign (if asked)</button>
-</div>
-
-
-</div>
-<script src="popup.js"></script>
+  <img src="icon.png" alt="Fixorium Logo" />
+  <h1>Connecting Wallet...</h1>
 </body>
 </html>
