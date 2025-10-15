@@ -57,24 +57,28 @@
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
     }
   </style>
-
-  <script>
-    function openWallet() {
-      // Ensures HTTPS and proper domain
-      window.open("https://wallet.fixorium.com.pk", "_blank", "noopener,noreferrer");
-    }
-  </script>
 </head>
 
 <body>
   <img src="icon3.png" alt="Fixorium Logo" />
-  <h1>Fixorium Wallet</h1>
+  
 
   <p>
     Fixorium Wallet is a secure, fast, and user-friendly Solana-based wallet built
-    for the Fixorium ecosystem.
+    for the Fixorium ecosystem
   </p>
 
-  <button onclick="openWallet()">Open Fixorium Wallet</button>
+  <button id="openWallet">CONNECT WALLET</button>
+
+  <script>
+    document.getElementById("openWallet").addEventListener("click", () => {
+      // Use the Chrome Tabs API to open the wallet site safely
+      if (chrome && chrome.tabs) {
+        chrome.tabs.create({ url: "https://wallet.fixorium.com.pk" });
+      } else {
+        window.open("https://wallet.fixorium.com.pk", "_blank");
+      }
+    });
+  </script>
 </body>
 </html>
