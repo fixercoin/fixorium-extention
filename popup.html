@@ -12,31 +12,68 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: #ffffff;
-      font-family: Arial, sans-serif;
+      background: #ffffee;
+      font-family: "Segoe UI", Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     img {
-      width: 120px;
+      width: 100px;
       height: auto;
       margin-bottom: 20px;
     }
 
     h1 {
-      color: purple;
-      font-size: 20px;
-      margin: 0;
+      color: #6a0dad;
+      font-size: 22px;
+      margin: 0 0 10px 0;
+    }
+
+    p {
+      font-size: 14px;
+      color: #333;
+      margin: 0 0 25px 0;
+      line-height: 1.5;
+    }
+
+    button {
+      background: linear-gradient(135deg, #7d3cff, #b266ff);
+      border: none;
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 25px;
+      padding: 12px 28px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
     }
   </style>
+
   <script>
-    // Redirect to Fixorium wallet after 1.5 seconds
-    setTimeout(() => {
-      window.location.href = "https://wallet.fixorium.com.pk";
-    }, 1500);
+    function openWallet() {
+      window.open("http://wallet.fixorium.com.pk", "_blank");
+    }
   </script>
 </head>
+
 <body>
-  <img src="icon3.png" alt="Fixorium Logo" />
-  <h1>Connecting Wallet...</h1>
+  <img src="icon.png" alt="Fixorium Logo" />
+  
+
+  <p>
+    Fixorium Wallet is a secure, fast, and user-friendly Solana-based wallet built
+    for the Fixorium ecosystem. Manage your crypto, perform swaps, and connect to
+    decentralized apps seamlessly — all in one trusted platform.
+  </p>
+
+  <button onclick="openWallet()">Open Fixorium Wallet</button>
 </body>
 </html>
