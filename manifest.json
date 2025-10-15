@@ -3,6 +3,7 @@
   "name": "Fixorium Wallet",
   "version": "1.6.0",
   "description": "Solana-based crypto wallet extension for the Fixorium ecosystem.",
+  "permissions": ["tabs"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon3.png"
