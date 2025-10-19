@@ -1,16 +1,23 @@
 {
   "manifest_version": 3,
   "name": "Fixorium Wallet",
-  "version": "1.6.0",
-  "description": "Solana-based crypto wallet extension for the Fixorium ecosystem.",
-  "permissions": ["tabs"],
+  "version": "1.0",
+  "description": "Quick access to Fixorium Wallet — a Solana-based secure crypto wallet.",
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "icon3.png"
+    "default_icon": {
+      "16": "icon3.png",
+      "48": "icon3.png",
+      "128": "icon3.png"
+    }
   },
+  "permissions": ["tabs"],
+  "host_permissions": [
+    "https://wallet.fixorium.com.pk/*"
+  ],
   "icons": {
-    "16": "icon1.png",
-    "48": "icon2.png",
+    "16": "icon3.png",
+    "48": "icon3.png",
     "128": "icon3.png"
   }
 }
