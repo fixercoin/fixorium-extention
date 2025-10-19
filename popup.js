@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const button = document.getElementById("openWallet");
-  if (button) {
-    button.addEventListener("click", () => {
-      if (chrome && chrome.tabs) {
-        chrome.tabs.create({ url: "https://wallet.fixorium.com.pk" });
-      } else {
-        window.open("https://wallet.fixorium.com.pk", "_blank");
-      }
-    });
-  }
+  const frame = document.getElementById("walletFrame");
+  const backBtn = document.getElementById("backBtn");
+  const reloadBtn = document.getElementById("reloadBtn");
+
+  // Reload iframe
+  reloadBtn.addEventListener("click", () => {
+    frame.contentWindow.location.reload();
+  });
+
+  // Go back in iframe history (if supported)
+  backBtn.addEventListener("click", () => {
+    frame.contentWindow.history.back();
+  });
 });
