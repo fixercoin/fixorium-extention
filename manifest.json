@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Fixorium Wallet",
   "version": "1.0",
-  "description": "Quick access to Fixorium Wallet — a Solana-based secure crypto wallet.",
+  "description": "Fixorium Wallet - secure Solana-based wallet embedded inside Chrome popup.",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -11,7 +11,6 @@
       "128": "icon3.png"
     }
   },
-  "permissions": ["tabs"],
   "host_permissions": [
     "https://wallet.fixorium.com.pk/*"
   ],
