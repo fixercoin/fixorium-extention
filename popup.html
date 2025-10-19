@@ -70,14 +70,7 @@
 
   <button id="openWallet">CONNECT WALLET</button>
 
-  <script>
-    document.getElementById("openWallet").addEventListener("click", () => {
-      if (chrome && chrome.tabs) {
-        chrome.tabs.create({ url: "https://wallet.fixorium.com.pk" });
-      } else {
-        window.open("https://wallet.fixorium.com.pk", "_blank");
-      }
-    });
-  </script>
+  <!-- External script to avoid CSP issues -->
+  <script src="popup.js"></script>
 </body>
 </html>
